@@ -1,0 +1,53 @@
+{% extends "notes/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="appbar">
+<img src="{% static 'notes/img/logo-getit.png' %}" class="logo" />
+<p class="top-bar-text">Como o Post-it, mas com outro verbo</p>
+</div>
+
+
+<main>
+<div class="card-container">
+	{% for note in notes %}
+		<div class="card">
+			
+			<div class="buttons-container">
+			<a class="fill-button">
+			  <span class="fill-button-hover">		
+				  <span class="fill-button-text" onclick="editNote({{note.id}})">Edit Bonito</span>
+			  </span>
+			</a>
+
+			<a class="fill-button">
+			  <span class="fill-button-hover">		
+				  <span class="fill-button-text" onclick="deleteForm({{note.id}})">Delete Bonito</span>
+			  </span>
+			</a>
+
+
+			<a class="fill-button">
+			  <span class="fill-button-hover">		
+				  <span>{{note.tag}}</span>
+			  </span>
+			</a>
+			</div>
+
+			<form name="deleteForm-{{note.id}}" method="post" class="ocult-form">
+				{% csrf_token %}
+				<input type="hidden" name="deleteNote" value="{{note.id}}">
+			</form>
+
+			<h3 class="card-title" name="title-{{note.id}}">{{note.title}}</h3>
+
+			<div class="card-content">
+				<p name="content-{{note.id}}">{{note.content}}</p>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+</main>
+{% endblock %}
+
