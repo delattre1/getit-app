@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'getit.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'getit',
-        'USER': 'getituser',
-        'PASSWORD': 'getitsenha',
-        'HOST': 'localhost',
+        'NAME': 'd3njf5ce9vjcrc',
+        'USER': 'axrpruqczolhgb',
+        'PASSWORD': '2ffe1707f16392788d2e60dc56df7ae87d5e6c88720b1aaa4876396cc84e6042',
+        'HOST': 'ec2-54-161-239-198.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
