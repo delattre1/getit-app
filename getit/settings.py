@@ -18,7 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'hj9c^)_ju(f1)(1_j-9a!=z8uy**2*xx77p&^m9q#is-n=!yd8'
 
@@ -51,6 +50,7 @@ MIDDLEWARE = [
 
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ROOT_URLCONF = 'getit.urls'
 
 TEMPLATES = [
