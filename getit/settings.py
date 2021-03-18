@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'hj9c^)_ju(f1)(1_j-9a!=z8uy**2*xx77p&^m9q#is-n=!yd8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['aqueous-retreat-63284.herokuapp.com','localhost' , '127.0.0.1']
+ALLOWED_HOSTS = ['aqueous-retreat-63284.herokuapp.com', '0.0.0.0',
+                 'localhost', '127.0.0.1']
 
 
 # Application definition
