@@ -15,7 +15,9 @@
 
 
 		<div class="card">
-			<a href="{% url 'tag' tag_=tag %}">{{tag}}</a>
+			<h3 class="card-title"> 
+				<a href="{% url 'tag' tag_=tag %}">{{tag}}</a>
+			</h3>		
 		</div>
 
 	{% endif %}
