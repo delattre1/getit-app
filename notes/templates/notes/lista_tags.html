@@ -1,0 +1,15 @@
+{% extends "notes/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% for tag in tags %}
+  {% if tag %}
+    <div>
+      <a href="{% url 'tag' tag_=tag%}">{{tag}}</a>
+    </div>
+  {% endif %}
+{% endfor %}
+{% endblock %}
+
+

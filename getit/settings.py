@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-
+#SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = "ichj_ib$0)&ao$vl3_*!&sfdm40=kb=9zt(18#_+7j#nv@w&nk"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,21 +76,29 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'getit.wsgi.application'
+# Resto do código...
+DEBUG = True
 
+# Resto do código...
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3njf5ce9vjcrc',
-        'USER': 'axrpruqczolhgb',
-        'PASSWORD': '2ffe1707f16392788d2e60dc56df7ae87d5e6c88720b1aaa4876396cc84e6042',
-        'HOST': 'ec2-54-161-239-198.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'getit',
+#        'USER': 'getituser',
+#        'PASSWORD': 'getitsenha',
+#        'HOST': 'localhost',
+#        'PORT': '5432',
+#    }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
